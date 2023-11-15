@@ -51,11 +51,19 @@ public class MenuPausa : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void Cerrar()
+    
+    public void CambiarNiveles(string nombreNivel)
     {
-        Debug.Log("Cerrando juego");
-        Application.Quit();
+    SceneManager.LoadScene(nombreNivel);
+    Time.timeScale = 1f;
     }
+
+    public void CambiarNiveles(int numeroNivel)
+    {
+    SceneManager.LoadScene(numeroNivel);
+    Time.timeScale = 1f;
+    }
+    
 
 
 }
